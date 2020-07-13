@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home"
+    app:startDestination="@+id/pokemonListFragment">
+
+    <fragment
+        android:id="@+id/pokemonListFragment">
+
+        <action
+            android:id="@+id/navigateToPokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/pokemonDetailFragment">
+
+        <argument
+            android:name="productDetailUI"
+            app:argType="com.govi.cleanarch.modular.presentation.pokemon.entity.PokemonDetailUI" />
+
+    </fragment>
+
+</navigation>

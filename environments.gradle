@@ -1,0 +1,15 @@
+class Environments {
+    String baseURL = ""
+}
+
+class EnvironmentItems {
+    Environments debug = new Environments()
+    Environments release = new Environments()
+}
+
+EnvironmentItems environments = new EnvironmentItems()
+
+environments.debug.baseURL = "<Your base URL>"
+environments.release.baseURL = "<Your base URL>"
+
+ext.environments = environments
